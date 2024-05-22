@@ -21,7 +21,7 @@ public class ExerciseSubmissionService {
     }
 
     public List<ExerciseSubmission> getUnassessedExerciseSubmissionByStudent(long studentId){
-        return exerciseSubmissionRepository.findByStudentAndMarks(studentId, (short) -1);
+        return exerciseSubmissionRepository.findByStudentIdAndMarks(studentId, (short) -1);
     }
 
     public ExerciseSubmission updateMarks(Long submissionId, short marks)

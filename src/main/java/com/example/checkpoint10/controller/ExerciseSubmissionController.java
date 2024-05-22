@@ -28,13 +28,13 @@ public class ExerciseSubmissionController {
 
     }
 
-    @GetMapping
+    @GetMapping("/student/{studentId}/unassessed")
     public ResponseEntity<List<ExerciseSubmission>> getUnassessedSubmission(@RequestParam long studentId){
         List<ExerciseSubmission> submissions = exerciseSubmissionService.getUnassessedExerciseSubmissionByStudent(studentId);
         return ResponseEntity.ok(submissions);
     }
 
-    @PatchMapping
+    @PatchMapping("/{submissionId}/marks")
     public ResponseEntity<ExerciseSubmission> updateMarks(@PathVariable long submissionId, @RequestParam short marks){
         ExerciseSubmission updatedSubmission = exerciseSubmissionService.updateMarks(submissionId, marks);
         return ResponseEntity.ok(updatedSubmission);

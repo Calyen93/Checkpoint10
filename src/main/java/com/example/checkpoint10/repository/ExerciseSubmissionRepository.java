@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface ExerciseSubmissionRepository extends JpaRepository <ExerciseSubmission, Long> {
 
-    List<ExerciseSubmission> findByStudentAndMarks(long studentId, short marks);
+    List<ExerciseSubmission> findByStudentIdAndMarks(long studentId, short marks);
 
 }
