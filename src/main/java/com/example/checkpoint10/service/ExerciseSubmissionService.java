@@ -3,9 +3,11 @@ package com.example.checkpoint10.service;
 import com.example.checkpoint10.models.ExerciseSubmission;
 import com.example.checkpoint10.repository.ExerciseSubmissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ExerciseSubmissionService {
 
     @Autowired
